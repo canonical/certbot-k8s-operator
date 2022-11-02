@@ -1,0 +1,19 @@
+name: magma-orc8r-controller
+summary: Magma Orchestrator Controller
+description: |
+  Magma Orchestrator Controller
+version: "1.6.0"
+license: Apache-2.0
+base: ubuntu:18.04
+platforms:
+  amd64:
+
+cmd: ["/usr/bin/certbot"]
+
+parts:
+
+  swagger:
+    plugin: nil
+    stage-packages:
+      - certbot
+      - python3-certbot-dns-google
